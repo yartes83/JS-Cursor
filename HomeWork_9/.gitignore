@@ -1,0 +1,264 @@
+HTML
+<h1>HELLO CURSOR!</h1>
+<h1>HELLO CURSOR!</h1>
+<h1>HELLO CURSOR!</h1>
+
+<h1 id="title">HELLO ID CURSOR</h1>
+
+<div class="wrapper">I AM WRAPPER</div>
+
+<div class="box">
+  <div class="inner">
+    <p class="some-class">Абабагаламага</p>
+    <p class="some-class">Слава Україні</p>
+    <p class="some-class">Героям Слава</p>
+    <p class="some-class">Слава Нації</p>
+  </div>
+</div>
+
+<button class="btn active">Click me</button>
+
+<button class="createNewDivButton">Create DIV</button>
+
+<div class="container"></div>
+
+<p class="one" data="privet">Test</p>
+
+<button class="toggle">Toggle</button>
+<br>
+<br>
+
+<p>Оберіть тип палива:</p>
+<input type="text" class="gallons">
+<br>
+<div>
+  <button class="gas" data='1.2'>А92</button>
+  <button class="gas" data='1.6'>А95</button>
+  <button class="gas" data='1.9'>А98</button>
+</div>
+
+----------------------------------------------------------------
+CSS
+.btn {
+    background-color: aqua;
+    border-radius: 5px;
+    border-color: blanchedalmond;
+    margin: 20px;
+    font-family: "Arial Black";
+}
+.btn:active {
+    background-color: #1ddc90;
+}
+.new-class {
+    background-color: #eca4b2;
+    font-family: "Book Antiqua";
+    font-size: 25px;
+}
+
+.newBox {
+    margin: 5px;
+    border: 2px solid red;
+    background-color: #eca4b2;
+    width: 30px;
+    height: 30px;
+}
+.container {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border: 2px solid violet;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.one {
+    background: #eca4b2;
+}
+
+.two {
+    background: violet;
+}
+.three {
+    border: 2px solid red;
+    border-radius: 3px;
+    background: #e8cd63;
+}
+.gas {
+    margin: 3px;
+    width: 50px;
+}
+
+------------------------------------------------------------------
+JS
+
+const h1 = document.getElementsByTagName('h1')
+console.log(h1)
+
+//створення масиву
+const jsArray = Array.from(h1);
+console.log(jsArray)
+
+console.log('-----------------------------------------')
+
+//звернення по ИД
+const idVariable = document.getElementById('title');
+console.log('idVariable: ', idVariable);
+
+const idVariable2 = document.querySelector('title');
+console.log('idVariable2: ', idVariable2);
+
+//звернення до класу
+const divFromHTML = document.querySelector('.wrapper'); // назва класу через точку
+console.log('divFromHTML: ', divFromHTML)
+
+const divManyClasses = document.querySelector('.box .inner .some-class'); //повертає перший елемент
+console.log('divManyClasses: ', divManyClasses);
+
+const divAllClasses = document.querySelectorAll('.box .inner .some-class'); // повертає масив елементів
+console.log('divAllClasses: ', divAllClasses);
+divAllClasses.forEach((el) => {
+    console.log('forEach: ', el)
+});
+//робота з контентом класа
+console.log('divFromHTML.textContent: ',divFromHTML.textContent);
+console.log('------------------------------------')
+
+//кнопка
+const button = document.querySelector('.btn');
+console.log('button.classList: ', button.classList)
+
+// button.onclick = () => {
+//     console.log('клацнув на кнопці')
+// }
+button.onclick = addClassForButtonNew;
+
+function addClassForButton() {
+    // console.log('клацнув на кнопці');
+    if (divFromHTML.classList.contains('new-class')) { //якщо в діві є вже клас new-class
+        divFromHTML.classList.remove('new-class');// то видаляємо цей клас
+    } else {
+        divFromHTML.classList.add('new-class'); //а якщо немає - то додаємо, а в CSS додаємо класс .new-class {background-color: red}
+    }
+    //divFromHTML.classList.add('new-class'); //додавання классу при кліку на кнопку для дів "wrapper"
+}
+//замість способу вище є ізі
+function addClassForButtonNew() {
+    divFromHTML.classList.toggle('new-class');
+}
+//створення кнопки, що додає нові діви на сторінці
+const createNewDivButton = document.querySelector('.createNewDivButton');
+const container = document.querySelector('.container'); // оголошуємо змінну по діву container
+
+createNewDivButton.onclick = createDiv;
+let counter = 0;
+
+function createDiv () {
+    const div = document.createElement('div'); //оголошуэмо внутр. змінну div
+    div.classList.add('newBox'); //даємо назву діву, який буде в html
+
+    if (counter > 5) {
+        alert ('Ну досить');
+        return;
+    }
+    // const ourTemplate = `
+    // <div class="newBox">ufuf</div> //або робимо внизу функцію createTextDivLayout
+    // `;
+    // container.prepend(div); //вставляємо дів в контейнер, який оголосили вище
+     //container.innerHTML += 'куку' //вставляється текст
+
+    const ourTemplate = createTextDivLayout('hello' + counter);
+    container.innerHTML += ourTemplate;
+    counter++;
+}
+
+function createTextDivLayout(str) {
+    return `<div class="newBox">${str}</div>`;
+}
+
+console.log(container.getBoundingClientRect())
+
+console.log('--------------------------------------------')
+// https://www.youtube.com/watch?v=3AvCvMXunLY&ab_channel=WebDev%D1%81%D0%BD%D1%83%D0%BB%D1%8F.%D0%9A%D0%B0%D0%BD%D0%B0%D0%BB%D0%90%D0%BB%D0%B5%D0%BA%D1%81%D0%B0%D0%9B%D1%83%D1%89%D0%B5%D0%BD%D0%BA%D0%BE
+const  one = document.querySelector('.one');
+
+one.style.width = '150px';
+one.style.paddingBottom = '40px';
+
+one.classList.add('two', 'three');
+
+one.classList.remove('three');
+
+const toggle = document.querySelector('.toggle');
+
+toggle.onclick = function () {
+    this.classList.toggle('three')
+}
+
+//атрібути
+console.log(one.getAttribute('data')) //що робить атрібут
+console.log(document.querySelector('link').getAttribute('href'));
+console.log(document.querySelector('meta').getAttribute('charset'));
+
+const buttonGas = document.querySelectorAll('.gas');
+
+let gas = document.querySelectorAll('.gas');
+for (let i = 0; i < gas.length; i++) {
+    gas[i].onclick = function () {
+        let gallons = document.querySelector('.gallons').value;
+        let amount = this.getAttribute('data');
+        console.log(gallons*amount);
+    }
+}
+console.log('----------------------------------------------------------')
+
+//https://www.youtube.com/watch?v=DuWyc76lYC4&ab_channel=%D0%A4%D1%80%D1%96%D0%BB%D0%B0%D0%BD%D1%81%D0%B5%D1%80%D0%BF%D0%BE%D0%B6%D0%B8%D1%82%D1%82%D1%8E
+const windowWidth = window.innerWidth;
+console.log(windowWidth)
+
+console.log(navigator.platform)
+console.log(location.href)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
