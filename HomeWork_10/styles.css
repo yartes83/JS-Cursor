@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css2?family=Alkalami&display=swap');
+
+body {
+    background: url("images/58400-devushka_motocikl_zakat_pole.jpg") no-repeat;
+    background-size: cover;
+}
+h1 {
+    margin-left: 40%;
+}
+h4 {
+    margin-left: 38%;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin-top: 5%;
+
+}
+
+.button {
+    justify-content: center;
+    align-content: center;
+    width: 165px;
+    height: 50px;
+    margin: 15px;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-color: #f17433;
+    font-family: 'Alkalami', serif;
+    font-size: 15px;
+    line-height: 15px;
+    font-weight: 400;
+    text-align: center;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    position: relative;
+    box-sizing: border-box;
+    transition: all 500ms ease;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+
+}
+
+.button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 3;
+    transition: 0s
+}
+.button:hover {
+    background: #f65404;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
