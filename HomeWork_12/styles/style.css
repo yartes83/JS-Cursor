@@ -1,0 +1,178 @@
+body {
+    background: url("../images/back_image.jpg");
+
+}
+.container {
+    display: flex;
+    margin: 30px auto;
+    width: 80vw;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    flex-wrap: wrap;
+    /*border: 2px solid #60a0df;*/
+    border-radius: 10px;
+}
+header {
+    width: 50%;
+    margin: 10px;
+}
+.btn {
+    width: 45%;
+    box-sizing: border-box;
+    appearance: none;
+    background-color: transparent;
+    border: 2px solid #3498db;
+    border-radius: 0.6em;
+    cursor: pointer;
+    align-self: center;
+    font-size: 1rem;
+    line-height: 1;
+    margin: 20px;
+    padding: 1.2em 2.8em;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Kanit', sans-serif;
+    font-weight: 700;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+}
+.btn:hover {
+    box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+    color: #fff;
+    outline: 0;
+}
+
+.heroesContainer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row-reverse;
+    justify-content: center;
+    position: relative;
+    width: 95%;
+    margin: 20px auto;
+}
+.hero {
+    width: 250px;
+    height: 350px;
+    border-radius: 10px;
+    background: linear-gradient(30deg, rgb(108, 143, 165), rgb(54, 66, 130));
+    margin: 15px;
+    text-align: center;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.hero:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+nav {
+    display: flex;
+}
+.planet {
+    width: 250px;
+    height: 280px;
+    border-radius: 10px;
+    background: linear-gradient(30deg, rgb(71, 171, 234), rgb(54, 66, 130));
+    margin: 15px;
+    text-align: center;
+    color: #f1f1f1;
+    cursor: pointer;
+}
+.planet:hover {
+    transition: all 0.5s;
+    transform: scale(1.1);
+    font-weight: bold;
+}
+.imageHero {
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.DarthVader {
+    background-image: url("../images/dv.jpg");
+}
+.R2-D2 {
+    background-image: url("../images/r2.jpg");
+}
+.LukeSkywalker {
+    background-image: url("../images/luk.jpg");
+}
+.C-3PO {
+    background-image: url("../images/c3po.jpg");
+}
+.LeiaOrgana {
+    background-image: url("../images/leia.jpg");
+}
+.Obi-WanKenobi {
+    background-image: url("../images/obi.jpg");
+}
+.BobaFett {
+    background-image: url("../images/boba.jpg");
+}
+.Chewbacca {
+    background-image: url("../images/chewbacca.jpg");
+}
+.HanSolo {
+    background-image: url("../images/han.jpg");
+}
+.Bossk {
+    background-image: url("../images/bossk.jpg");
+}
+.Yoda {
+    background-image: url("../images/yoda.jpg");
+}
+.Lobot {
+    background-image: url("../images/lobot.jpg");
+}
+.Palpatine {
+    background-image: url("../images/palpatine.jpg");
+}
+.IG-88 {
+    background-image: url("../images/ig88.jpg");
+}
+.WedgeAntilles {
+    background-image: url("../images/wedge.jpg");
+}
+.LandoCalrissian {
+    background-image: url("../images/lando.jpg");
+}
+.imagePlanet {
+    border: 1px solid white;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+}
+.YavinIV{
+    background-image: url("../images/yavin.jpg");
+}
+.Alderaan {
+    background-image: url("../images/alderaan.jpg");
+}
+.Tatooine {
+    background-image: url("../images/tatooine.jpg");
+}
+.Bespin {
+    background-image: url("../images/bespin.jpg");
+}
+.Dagobah {
+    background-image: url("../images/dagobah.jpg");
+}
+.Hoth {
+    background-image: url("../images/hoth.jpg");
+}
+.Coruscant {
+    background-image: url("../images/coruscant.jpg");
+}
+.Naboo {
+    background-image: url("../images/naboo.jpg");
+}
+.Endor {
+    background-image: url("../images/endor.jpg");
+}
+.Kamino {
+    background-image: url("../images/kamino.jpg");
+}
