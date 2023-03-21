@@ -1,5 +1,4 @@
 // 1. Створіть функцію getRandomArray(length, min, max) – яка повертає масив випадкових цілих чисел.
-
 function getRandomArray (length, min, max) {
     let arr = [];
 
@@ -8,19 +7,18 @@ function getRandomArray (length, min, max) {
     }
     return arr;
 }
-console.log(getRandomArray (10, 1, 10))
+console.log('Завдання №1: ', getRandomArray (10, 1, 10))
 
 // 2. Створіть функцію filterEvenNumbers(...numbers) – яка фільтрує парні числа передані як аргументи функції:
-
 function filterEvenNumbers (...numbers) {
-
-    const result = numbers.filter((numbers) => numbers % 2 !== 0).join(", ")
-
-    return result
+    const result = [numbers.filter((numbers) => numbers % 2 !== 0)];
+    return result;
 }
 
-//3. Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів:
+console.log ('Завдання №2: ', filterEvenNumbers(2, 4, 6, 7, 9));
 
+
+//3. Створіть функцію getMedian(...numbers) – яка рахує медіану всіх переданих в неї аргументів:
 function getMedian(...values) {
 
 
@@ -34,10 +32,10 @@ function getMedian(...values) {
         return (values[half-1] + values[half]) / 2.0;
 }
 
-console.log(getMedian(1, 2, 3, 4, 5))
+console.log('Завдання №3: ',getMedian(1, 2, 3, 4, 5));
+
 
 //4. Створіть функцію countPositiveNumbers(...numbers) – яка порахує кількість чисел більших 0:
-
 function countPositiveNumbers(...numbers) {
 
     let number = [0];
@@ -49,16 +47,16 @@ function countPositiveNumbers(...numbers) {
     return number
 }
 
-console.log(countPositiveNumbers(1, -2, 3, -4, -5, 6))
+console.log('Завдання №4:', countPositiveNumbers(1, -2, 3, -4, -5, 6))
 
 // 5. Створіть функцію getDividedByFive(...numbers) – яка відфільтрує усі елементи в масиві та залишить тільки ті, які діляться на ціло на 5:
 
 function getDividedByFive(...numbers) {
-    let result = numbers.filter((number) => number % 5 === 0).join(", ");
+    let result = [numbers.filter((number) => number % 5 === 0)];
 
     return result;
 }
-console.log(getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
+console.log('Завдання №5:', getDividedByFive(6, 2, 55, 11, 78, 2, 55, 77, 57, 87, 23, 2, 56, 3, 2))
 
 // 6. Створіть функцію divideByThree(word), яка розбиває кожне слово на умовні склади по 3 букви. Якщо букв менше трьох – не розбиває. Пробіли завжди видаляються. Рядок приводится до нижнього регістру.
 function divideByThree (words) {
@@ -69,7 +67,7 @@ function divideByThree (words) {
     return divided;
 }
 
-console.log(divideByThree("Commander"))
+console.log('Завдання №6:', divideByThree("Commander"))
 
 
 
