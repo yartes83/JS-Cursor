@@ -8,7 +8,7 @@ function maxDigit(n){
     }
 }
 
-console.log(maxDigit(234))
+console.log('1. Найбільша цифра:' ,maxDigit(234));
 
 
 // 2. Створити функцію, яка визначає ступінь числа. Не використовуючи Math.pow та **. Використовуйте цикл
@@ -20,7 +20,7 @@ function pow(a, b) {
     return result;
 }
 
-console.log(pow(4,7))
+console.log('2. Ступінь числа:', pow(4,7));
 
 //3. Створити функцію, яка форматує ім'я, роблячи першу букву великою. ("влад" -> "Влад", "вЛАД" -> "Влад" і так далі);
 function nameFormat(str) {
@@ -29,22 +29,19 @@ function nameFormat(str) {
     return str[0].toUpperCase() + str.slice(1).toLowerCase();
 }
 
-console.log(nameFormat('курсор'))
+console.log('3. Форматування імені: ', nameFormat('курсор'));
+
 // 4. Створити функцію, яка вираховує суму, що залишається після оплати податку від зарабітньої плати. (Податок = 18% + 1.5% -> 19.5%). Приклад: 1000 -> 805
 function getSumAfterDuty(sum, duty) {
-    let x = sum;
-    let y = duty; //податок
-
-    return result = x - (x / 100 * y);
+    return result = sum - (sum / 100 * duty);
 }
 
-console.log(getSumAfterDuty(2000, 5))
+console.log('4. ЗП після податків: ', getSumAfterDuty(2000, 5));
 
 function getSumAfterKnownDuty(sum) {
-    let x = sum;
     let y = 19.5; //податок
 
-    return result = x - (x / 100 * y);
+    return result = sum - (sum / 100 * y);
 }
 
 //5. Створити функцію, яка повертає випадкове ціле число в діапазоні від N до M:
@@ -54,23 +51,22 @@ function getRandomNumber(N, M) {
     return Math.floor(Math.random() * (M - N + 1)) + N;
 }
 
-console.log(getRandomNumber(17, 36))
+console.log('5. Рандомне число: ', getRandomNumber(17, 36));
 
 // 6. Створити функцію, яка рахує скільки разів певна буква повторюється в слові:
 function countLetter (str, N) {
     let count = 0;
-    let pos = str.indexOf(N)
+    let pos = str.indexOf(N);
 
     while (pos !== -1) {
         count++;
         pos = str.indexOf(N, pos + 1);
     }
-    return count
+    return count;
 }
 
-console.log(countLetter('Абабагаламага', 'а'))
-//console.log(countLetter('Yaroslav', 'a')) - якщо так ввести - працює, якщо без лапок - ні. Соромно зізнатися, але як перевести в стрінгу? str = String(str) - не працює.
-//Закінчу домашку - буду гуглити
+console.log('6. Повтор букви "a" у слові "Абабагаламага": ', countLetter('Абабагаламага', 'а'))
+
 function countLetter1 () {
     let str = prompt(String('Введіть слово'));
     let N = prompt(String('Введіть букву'));
@@ -90,7 +86,7 @@ function convertation () {
     const dollar = 30;
     let currency = prompt('Введіть суму');
     let typeCurrency = prompt('Введіть тип валюти (UAH або $)');
-    typeCurrency = typeCurrency.toLowerCase()
+    typeCurrency = typeCurrency.toLowerCase();
 
     if (typeCurrency != 'uah' || '$') {
         alert('Тільки гривні або долари');
@@ -154,7 +150,7 @@ function convertProfi(currency) {
 
 
 
-//Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам:
+//9. Створіть функцію генерації випадкового паролю (тільки числа), довжина встановлюється користувачем або по замовчуванню = 8 символам:
 
 function getRandomPassword(number) {
     if (number) {
@@ -164,21 +160,21 @@ function getRandomPassword(number) {
     }
 }
 
-console.log(getRandomPassword(9))
+console.log('9. Пароль: ', getRandomPassword(9))
 
-// Створіть функцію, яка видаляє всі букви з речення. ( https://ru.stackoverflow.com/questions/1115206/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%BD%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%B9-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82-%D0%B8%D0%B7-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8 )
+//10. Створіть функцію, яка видаляє всі букви з речення. ( https://ru.stackoverflow.com/questions/1115206/%D0%9A%D0%B0%D0%BA-%D1%83%D0%B4%D0%B0%D0%BB%D0%B8%D1%82%D1%8C-%D0%BA%D0%BE%D0%BD%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D1%8B%D0%B9-%D1%8D%D0%BB%D0%B5%D0%BC%D0%B5%D0%BD%D1%82-%D0%B8%D0%B7-%D1%81%D1%82%D1%80%D0%BE%D0%BA%D0%B8 )
 function deleteLetters(letter, word) {
     return word.split(letter).join("");
 }
 
-console.log(deleteLetters('а', 'абабагаламага'))
+console.log('10. Видаляємо "а" з "Абабагаламага":', deleteLetters('а', 'абабагаламага'))
 
-// Створіть функцію, яка перевіряє, чи є слово паліндромом. ( https://overcoder.net/q/111459/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%B0%D0%BB%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC%D0%B0-%D0%B2-javascript  )
+//11. Створіть функцію, яка перевіряє, чи є слово паліндромом. ( https://overcoder.net/q/111459/%D0%BF%D1%80%D0%BE%D0%B2%D0%B5%D1%80%D0%BA%D0%B0-%D0%BF%D0%B0%D0%BB%D0%B8%D0%BD%D0%B4%D1%80%D0%BE%D0%BC%D0%B0-%D0%B2-javascript  )
 function checkPalindrom (str) {
     return str == str.split('').reverse().join('');
 }
 
-console.log(checkPalindrom('анна'))
+console.log('11. Чи слово "aнна" поліндром? ', checkPalindrom('анна'))
 
 
 
