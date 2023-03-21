@@ -2,7 +2,7 @@ const students = ["Олександр", "Ігор", "Олена", "Іра", "О�
 const themes = ["Диференційне рівняння", "Теорія автоматів", "Алгоритми і структури даних"];
 const marks = [4, 5, 5, 3, 4, 5];
 
-//Завдання №1. Розділіть студентів на пари(хлопець + дівчина) для работи над проєктом:
+//Завдання №1. Розділіть студентів на пари(хлопець + дівчина) для роботи над проєктом:
 function getPairs(students) {
     const girls = students.filter((item) => item.charAt(item.length - 1) === "а");   //https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Global_Objects/String/charAt
     const boys = students.filter((item) => item.charAt(item.length - 1) !== "а");   // filter https://www.youtube.com/watch?v=E6V1KTCcYUA ,  https://www.youtube.com/watch?v=sfIMbe4RLug
@@ -11,7 +11,8 @@ function getPairs(students) {
     return pairsRes;
 }
 const pairs = getPairs(students);
-console.log(pairs);
+console.log('Завдання №1. Розділіть студентів на пари: ', pairs);
+
 
 //Завдання №2. Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати:
 function getThemesAndStudents (pairs, themes){
@@ -19,17 +20,16 @@ function getThemesAndStudents (pairs, themes){
 
     return result;
 }
-console.log(getThemesAndStudents(pairs, themes));
+console.log('Завдання №2: ', getThemesAndStudents(pairs, themes));
 
 //Завдання №3. Зіставте оцінки(marks) зі студентом(students):
 function studentsMarks (students, marks) {
     let result = students.map(item => [item, marks[students.indexOf(item)]]);
     return result;
 }
-console.log(studentsMarks (students, marks));
+console.log('Завдання №3: ', studentsMarks (students, marks));
 
 const themesAndStudents = getThemesAndStudents(pairs, themes);
-console.log(themesAndStudents);
 
 //Завдання №4. Поставте кожній парі випадкову оцінку(від 1 до 5):
 function getRandomMarks (themesAndStudents) {
@@ -39,4 +39,4 @@ function getRandomMarks (themesAndStudents) {
     return result;
 }
 let groupResults = getRandomMarks (themesAndStudents);
-console.log(groupResults);
+console.log('Завдання №4: ', groupResults);
