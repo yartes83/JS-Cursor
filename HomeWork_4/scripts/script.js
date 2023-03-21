@@ -11,7 +11,7 @@ function getPairs(students) {
     return pairsRes;
 }
 const pairs = getPairs(students);
-console.log('Завдання №1. Розділіть студентів на пари: ', pairs);
+console.log('Завдання №1: ', pairs);
 
 
 //Завдання №2. Зіставте пари з попереднього завдання та теми проєктів, над якими студенти будуть працювати:
