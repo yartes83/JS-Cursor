@@ -1,0 +1,15 @@
+.Author img {
+    margin: 70px 30px 10px 30px;
+    border-radius: 20px;
+    float: left;
+}
+.Author {
+    background-color: #282c34;
+    height: 100vh;
+    color: #f1f1f1;
+    white-space: pre-line;
+}
+.Author p {
+    margin: 70px 40px 40px 40px;
+    line-height: 18px;
+}
