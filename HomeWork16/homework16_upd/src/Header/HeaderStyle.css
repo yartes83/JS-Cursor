@@ -1,0 +1,29 @@
+.Header {
+    width: 100cqw;
+    height: 8cqh;
+    background: rgba(33, 33, 33, 0.20);
+    text-align: center;
+    color: #844f4f;
+    background-size: cover;
+    position: absolute;
+
+
+}
+.Header li {
+    font-size: clamp(10px, 5cqb, 25px);
+    align-self: center;
+    flex-direction: row;
+    color: lightgray;
+    justify-content: center;
+    padding: 0 40px;
+    font-weight: bold;
+    list-style: none;
+    display: inline-block;
+
+}
+a {
+    text-decoration: none;
+}
+.bestiary {
+    color: greenyellow;
+}
