@@ -6,7 +6,7 @@ body {
     display: flex;
     flex-direction: row;
     margin: 40px;
-    justify-content: flex-start;
+    justify-content: center;
 }
 
 .out {
